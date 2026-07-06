@@ -13,10 +13,7 @@ export default function HomePage() {
       <nav>
         <div className="container nav-inner">
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <div style={{ width: 36, height: 36, background: 'var(--blue)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <span style={{ color: 'white', fontWeight: 800, fontSize: '1rem' }}>OM</span>
-            </div>
-            <span style={{ fontWeight: 700, fontSize: '1.1rem', color: 'var(--navy)' }}>Open Mortgage</span>
+            <img src="/opl.png" alt="Open Lending" style={{ height: 105 }} />
           </Link>
           <div className="nav-links">
             <Link href="/#services" className="nav-link">Services</Link>
