@@ -3,7 +3,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ArrowRight, ChevronRight, CheckCircle, MapPin, Mail, Phone } from 'lucide-react'
 
-export const metadata = { title: 'About Us - Open Mortgage', description: 'Learn about Open Mortgage — our story, values, and the team behind your mortgage experience.' }
+export const metadata = { title: 'About Us - Open Lending', description:
+  'Learn about Open Lending, our story, values, and the experienced team behind your lending journey.'}
 
 const values = [
   { icon: '🎯', title: 'Client First', desc: 'Every recommendation we make is measured against one standard: is this genuinely the best outcome for the client?' },
@@ -11,7 +12,7 @@ const values = [
   { icon: '⚡', title: 'Execution', desc: 'Advice without execution is just conversation. We follow through on every step from application to settlement.' },
   { icon: '📚', title: 'Education', desc: 'We believe informed clients make better decisions. We take time to explain the why behind every strategy.' },
   { icon: '🤝', title: 'Long-term Relationships', desc: 'The loan settles, but our relationship continues. We review your structure annually as life and rates change.' },
-  { icon: '✅', title: 'Accountability', desc: 'We set realistic expectations and own the outcome — good or bad. Our reputation depends on it.' },
+  { icon: '🛡️', title: 'Accountability', desc: 'We set realistic expectations and own the outcome -good or bad. Our reputation depends on it.' },
 ]
 
 const team = [
@@ -30,7 +31,7 @@ const team = [
   {
     name: 'James Liu',
     role: 'Commercial Lending Specialist',
-    bio: 'James focuses on business lending — commercial property, equipment finance, and development funding. He has structured over $80M in commercial transactions across QLD and NSW.',
+    bio: 'James focuses on business lending -commercial property, equipment finance, and development funding. He has structured over $80M in commercial transactions across QLD and NSW.',
     credentials: ['Cert IV Finance & Mortgage Broking', 'Diploma of Finance', 'MFAA Member'],
   },
 ]
@@ -42,7 +43,7 @@ const offices = [
 ]
 
 const milestones = [
-  { year: '2015', title: 'Founded in Sydney', desc: 'Open Mortgage was established with a focus on structured lending advice for residential clients.' },
+  { year: '2015', title: 'Founded in Sydney', desc: 'Open Lending was established with a focus on structured lending advice for residential clients.' },
   { year: '2017', title: 'Brisbane Office Opens', desc: 'Expanded into Queensland to serve the growing Southeast Queensland property market.' },
   { year: '2019', title: 'Commercial Division', desc: 'Launched a dedicated commercial lending team to serve business clients and investors.' },
   { year: '2021', title: '$100M Milestone', desc: 'Surpassed $100 million in total loans settled for Australian families and businesses.' },
@@ -68,12 +69,13 @@ export default function AboutPage() {
             <ChevronRight size={14} color="rgba(255,255,255,0.3)" />
             <span style={{ color: '#93B4FF', fontSize: '0.85rem' }}>About Us</span>
           </div>
-          <div className="pill" style={{ marginBottom: '1.5rem' }}>🏢 Our Story</div>
+          <div className="pill" style={{ marginBottom: '1.5rem' }}>🏢 About Open Lending</div>
           <h1 className="display" style={{ color: 'white', maxWidth: 680, marginBottom: '1.5rem' }}>
-            A mortgage firm built on<br /><span style={{ color: '#93B4FF' }}>trust and execution</span>
+            A lending partner built on<br /><span style={{ color: '#93B4FF' }}>trust and execution</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.15rem', lineHeight: 1.75, maxWidth: 580, marginBottom: '2.5rem' }}>
-            Open Mortgage was founded on a simple belief: Australians deserve mortgage advice that is honest, structured, and followed through to completion.
+            Open Lending was founded on a simple belief:
+            Australians deserve lending advice that is honest, strategic, and delivered with integrity from start to finish.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <Link href="/contact" className="btn-primary">Work With Us <ArrowRight size={16} /></Link>
@@ -99,19 +101,19 @@ export default function AboutPage() {
             <div>
               <div className="label">Our Story</div>
               <div className="divider" />
-              <h2 className="heading-1" style={{ marginBottom: '1.25rem' }}>Why we started Open Mortgage</h2>
+              <h2 className="heading-1" style={{ marginBottom: '1.25rem' }}>Why we started Open Lending</h2>
               <p className="body-lg" style={{ marginBottom: '1.25rem' }}>
-                Open Mortgage was founded in 2015 after our founding team saw too many clients receive generic loan recommendations that suited the broker's panel — not the client's situation.
+                Open Lending was founded in 2015 after our founding team saw too many clients receive generic loan recommendations that suited the broker's panel - not the client's situation.
               </p>
               <p className="body" style={{ marginBottom: '1.25rem' }}>
-                We set out to build something different: a firm where every recommendation starts with a deep understanding of the client's goals, financial position, and timeline — and ends with a loan that actually fits.
+                We set out to build something different: a firm where every recommendation starts with a deep understanding of the client's goals, financial position, and timeline - and ends with a loan that actually fits.
               </p>
               <p className="body" style={{ marginBottom: '2rem' }}>
                 Today, we operate from three offices across Sydney, Brisbane, and Hobart, with a team of specialists covering residential, commercial, and investment lending. Our panel spans 50+ lenders, from major banks to specialist non-bank lenders.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  'Independently owned — no bank ownership or preferred lender bias',
+                  'Independently owned no bank ownership or preferred lender bias',
                   'Fee structure disclosed upfront on every engagement',
                   'Access to lenders not available through bank branches',
                   'Ongoing review at no additional cost after settlement',
@@ -135,9 +137,9 @@ export default function AboutPage() {
               }}>Team / Office Photo Placeholder</div>
               <div style={{ background: 'var(--navy)', borderRadius: '1rem', padding: '1.75rem' }}>
                 <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem', lineHeight: 1.7, fontStyle: 'italic', marginBottom: '1rem' }}>
-                  "We measure success not by how many loans we write, but by how many clients genuinely feel they made the right decision — five years later."
+                  "We measure success not by how many loans we write, but by how many clients genuinely feel they made the right decision - five years later."
                 </p>
-                <div style={{ color: '#93B4FF', fontWeight: 600, fontSize: '0.875rem' }}>— Kevin Zhang, Director</div>
+                <div style={{ color: '#93B4FF', fontWeight: 600, fontSize: '0.875rem' }}>- Kevin Zhang, Director</div>
               </div>
             </div>
           </div>
@@ -264,7 +266,7 @@ export default function AboutPage() {
           <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', marginTop: '3rem', flexWrap: 'wrap' }}>
             {[
               { icon: <Mail size={18} />, label: 'info@omlending.com.au' },
-              { icon: <Phone size={18} />, label: 'Mon–Fri 10:00 am – 6:00 pm' },
+              { icon: <Phone size={18} />, label: 'Mon–Fri 10:00 am -6:00 pm' },
             ].map(c => (
               <div key={c.label} style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', color: 'var(--muted)', fontSize: '0.9rem' }}>
                 <span style={{ color: 'var(--blue)' }}>{c.icon}</span>
@@ -292,7 +294,7 @@ export default function AboutPage() {
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 className="heading-1" style={{ color: 'white', marginBottom: '1rem' }}>Ready to work with us?</h2>
           <p style={{ color: 'rgba(255,255,255,0.65)', maxWidth: 480, margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
-            Book a free strategy call with one of our specialists and get a clear plan for your mortgage.
+            Book a free strategy call with one of our specialists and get a clear lending strategy tailored to your goals. 
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" className="btn-primary">Book a Free Call <ArrowRight size={16} /></Link>
@@ -305,3 +307,4 @@ export default function AboutPage() {
     </>
   )
 }
+

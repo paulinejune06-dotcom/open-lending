@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container" style={{ padding: '4rem 2rem 0' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '3rem', paddingBottom: '3rem' }}>
           <div>
-            <div className="footer-brand">Open Mortgage</div>
+            <div className="footer-brand">Open Lending</div>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem', maxWidth: 280 }}>
               Your trusted partner for mortgage solutions in Sydney, Brisbane, and Hobart.
             </p>
@@ -47,10 +47,11 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
-          <span>© 2026 Open Mortgage. All rights reserved.</span>
+          <span>© 2026 Open Lending. All rights reserved.</span>
           <span>Credit Representative · Australian Credit Licence</span>
         </div>
       </div>
     </footer>
   )
 }
+

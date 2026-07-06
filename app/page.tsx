@@ -31,76 +31,118 @@ export default function HomePage() {
       </nav>
 
       {/* HERO */}
-<section className="hero" style={{ paddingTop: 72 }}>
-  <div className="orb" style={{ width: 600, height: 600, top: -200, right: -200 }} />
-  <div className="container hero-content" style={{ paddingTop: '4rem', paddingBottom: '5rem' }}>
+            <section
+    className="hero"
+    style={{
+      paddingTop: 72,
+      minHeight: "88vh",
+      backgroundImage:
+        'url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80")'
+      ,
+      backgroundSize: "cover",
+      backgroundPosition: "65% center",
+      backgroundRepeat: "no-repeat",
+    }}
+>
+    <div className="orb" style={{ width: 600, height: 600, top: -200, right: -200 }} />
+    <div className="container hero-content" style={{ paddingTop: '4rem', paddingBottom: '5rem' }}>
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+    </div>
       
       {/* Left: Text */}
-      <div>
-        <div className="hero-eyebrow">Australia's Trusted Mortgage Partner</div>
-        <h1 className="display" style={{ color: 'white', marginBottom: '1.5rem' }}>
-          Open Your<br />
-          <span style={{ color: '#93B4FF' }}>Dream Home</span>
-        </h1>
-        <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: '1.2rem', lineHeight: 1.7, maxWidth: 480, marginBottom: '2.5rem' }}>
-          Structured lending advice, lender matching, and end-to-end support from assessment to settlement.
-        </p>
-        <div className="hero-btns">
-          <Link href="/contact" className="btn-primary">Free Consultation <ArrowRight size={16} /></Link>
-          <Link href="/#process" className="btn-outline-white">See Our Process</Link>
+<div
+ style={{
+  maxWidth: 620,
+  padding: "2.5rem",
+  borderRadius: "18px",
+
+  background: "rgba(18,18,25,0.20)",
+
+  backdropFilter: "blur(3px)",
+
+  border: "1px solid rgba(255,255,255,0.12)",
+
+  boxShadow: "0 10px 30px rgba(0,0,0,.15)",
+}}
+>
+  <div className="hero-eyebrow">
+    OPENING MORE POSSIBILITIES
+  </div>
+
+  <h1
+    className="display"
+    style={{
+      color: "#fff",
+      marginBottom: "1.5rem",
+      lineHeight: 1.05,
+    }}
+  >
+    Open Your
+    <br />
+    <span style={{ color: "#8F6BFF" }}>
+      Dream Home
+    </span>
+  </h1>
+
+  <p
+    style={{
+      color: "rgba(255,255,255,0.88)",
+      fontSize: "1.15rem",
+      lineHeight: 1.8,
+      maxWidth: 500,
+      marginBottom: "2.5rem",
+    }}
+  >
+    Structured lending advice, lender matching, and end-to-end support
+    from assessment to settlement.
+  </p>
+
+  <div className="hero-btns">
+    <Link href="/contact" className="btn-primary">
+      Free Consultation <ArrowRight size={16} />
+    </Link>
+
+    <Link href="/#process" className="btn-outline-white">
+      See Our Process
+    </Link>
+  </div>
+
+  <div
+    style={{
+      display: "flex",
+      gap: "3rem",
+      marginTop: "3.5rem",
+      flexWrap: "wrap",
+    }}
+  >
+    {[
+      { num: "500+", label: "Loans Settled" },
+      { num: "$200M+", label: "Funds Placed" },
+      { num: "50+", label: "Lender Panel" },
+    ].map((s) => (
+      <div key={s.label}>
+        <div
+          style={{
+            fontSize: "2rem",
+            fontWeight: 800,
+            color: "#fff",
+          }}
+        >
+          {s.num}
         </div>
-        <div style={{ display: 'flex', gap: '3rem', marginTop: '4rem', flexWrap: 'wrap' }}>
-          {[{ num: '500+', label: 'Loans Settled' }, { num: '$200M+', label: 'Funds Placed' }, { num: '50+', label: 'Lender Panel' }].map(s => (
-            <div key={s.label}>
-              <div style={{ fontSize: '2rem', fontWeight: 800, color: 'white', letterSpacing: '-0.03em' }}>{s.num}</div>
-              <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)', marginTop: 2 }}>{s.label}</div>
-            </div>
-          ))}
+
+        <div
+          style={{
+            fontSize: "0.85rem",
+            color: "rgba(255,255,255,0.75)",
+            marginTop: 4,
+          }}
+        >
+          {s.label}
         </div>
       </div>
-
-      {/* Right: Image */}
-      <div style={{ position: 'relative' }}>
-        <div style={{ borderRadius: '1.25rem', overflow: 'hidden', position: 'relative' }}>
-          <img
-            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
-            alt="Modern home"
-            style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block' }}
-          />
-          {/* Overlay card */}
-          <div style={{
-            position: 'absolute', bottom: 24, left: 24, right: 24,
-            background: 'rgba(10,22,40,0.85)', backdropFilter: 'blur(12px)',
-            borderRadius: '0.875rem', padding: '1.25rem 1.5rem',
-            border: '1px solid rgba(255,255,255,0.1)'
-          }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div>
-                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', marginBottom: 4 }}>Monthly Repayment</div>
-                <div style={{ color: 'white', fontWeight: 800, fontSize: '1.5rem', letterSpacing: '-0.02em' }}>$3,840</div>
-              </div>
-              <div style={{ textAlign: 'right' }}>
-                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', marginBottom: 4 }}>Rate</div>
-                <div style={{ color: '#93B4FF', fontWeight: 700, fontSize: '1.1rem' }}>6.14% p.a.</div>
-              </div>
-              <div style={{ background: '#1B4FD8', borderRadius: '0.5rem', padding: '0.5rem 1rem' }}>
-                <div style={{ color: 'white', fontSize: '0.75rem', fontWeight: 600 }}>✓ Approved</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Floating badge */}
-        <div style={{
-          position: 'absolute', top: -16, right: -16,
-          background: '#1B4FD8', borderRadius: '1rem',
-          padding: '1rem 1.25rem', textAlign: 'center'
-        }}>
-          <div style={{ color: 'white', fontWeight: 800, fontSize: '1.25rem' }}>50+</div>
-          <div style={{ color: '#93B4FF', fontSize: '0.7rem' }}>Lenders</div>
-        </div>
+    ))}
       </div>
-
     </div>
   </div>
 </section>
@@ -112,9 +154,9 @@ export default function HomePage() {
             <div>
               <div className="label">About Us</div>
               <div className="divider" />
-              <h2 className="heading-1" style={{ marginBottom: '1.25rem' }}>Welcome to Open Mortgage</h2>
+              <h2 className="heading-1" style={{ marginBottom: '1.25rem' }}>Welcome to Open Lending</h2>
               <p className="body-lg" style={{ marginBottom: '1.5rem' }}>
-                At Open Mortgage, we are committed to providing exceptional financial solutions tailored to your unique needs.
+                At Open Lending, we are committed to providing exceptional financial solutions tailored to your unique needs.
               </p>
               <p className="body" style={{ marginBottom: '2rem' }}>
                 With years of experience in the mortgage industry, our team of experts is dedicated to helping you achieve your property and financial goals.
@@ -188,7 +230,7 @@ export default function HomePage() {
             ))}
           </div>
           <div style={{ marginTop: '4rem', background: 'linear-gradient(135deg, var(--navy) 0%, #1B3A6B 100%)', borderRadius: '1.25rem', padding: '3rem', textAlign: 'center' }}>
-            <h3 className="heading-2" style={{ color: 'white', marginBottom: '0.75rem' }}>Ready for a more professional mortgage process?</h3>
+            <h3 className="heading-2" style={{ color: 'white', marginBottom: '0.75rem' }}>Ready for a more smart lending experience?</h3>
             <p style={{ color: 'rgba(255,255,255,0.65)', marginBottom: '2rem', maxWidth: 480, margin: '0 auto 2rem' }}>
               Share your current scenario and we will give you a structured action plan with clear recommendations.
             </p>
@@ -204,9 +246,9 @@ export default function HomePage() {
       <section className="section" style={{ background: 'var(--sky)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div className="label">Why Open Mortgage</div>
+            <div className="label">Why Open Lending</div>
             <div className="divider" style={{ margin: '1rem auto 1.5rem' }} />
-            <h2 className="heading-1">Why Choose Open Mortgage</h2>
+            <h2 className="heading-1">Why Choose Open Lending</h2>
           </div>
           <div className="grid-4">
             {[
@@ -236,12 +278,32 @@ export default function HomePage() {
           </div>
           <div className="grid-3">
             {[
-              { title: 'Home Loan', icon: <Home size={32} />, desc: 'Whether you are buying your first home, upgrading, or refinancing — we find the right loan structure for your situation.', link: '/services/home-loan' },
-              { title: 'Car Loan', icon: <Car size={32} />, desc: 'Competitive car finance solutions with fast approvals and flexible repayment terms tailored to your budget.', link: '/services/car-loan' },
-              { title: 'Commercial Loan', icon: <Building2 size={32} />, desc: 'Business lending solutions for property acquisition, equipment, and working capital — structured for your growth.', link: '/services/commercial-loan' },
+              { title: 'Home Loan', icon: <Home size={32} />, desc: 'Whether you are buying your first home, upgrading, or refinancing -we find the right loan structure for your situation.', link: '/services/home-loan', image: '/images/services/home-loan.png', },
+              { title: 'Car Loan', icon: <Car size={32} />, desc: 'Competitive car finance solutions with fast approvals and flexible repayment terms tailored to your budget.', link: '/services/car-loan', image: '/images/services/car-loan.png', },
+              { title: 'Commercial Loan', icon: <Building2 size={32} />, desc: 'Business lending solutions for property acquisition, equipment, and working capital?structured for your growth.', link: '/services/commercial-loan', image: '/images/services/commercial-loan.png', },
             ].map(s => (
               <div key={s.title} className="card">
-                <div style={{ width: '100%', aspectRatio: '16/9', background: 'linear-gradient(135deg, #EEF3FF 0%, #D6E4FF 100%)', borderRadius: '0.75rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--blue)' }}>{s.icon}</div>
+                <div
+                  style={{
+                    width: '100%',
+                    aspectRatio: '3 / 2',
+                    overflow: 'hidden',
+                    borderRadius: '0.75rem',
+                    marginBottom: '1.5rem',
+                  }}
+                >
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block',
+                      transition: 'transform .4s ease',
+                    }}
+                  />
+                </div>
                 <h3 className="heading-3" style={{ marginBottom: '0.75rem', color: 'var(--navy)' }}>{s.title}</h3>
                 <p className="body" style={{ marginBottom: '1.5rem', fontSize: '0.9rem' }}>{s.desc}</p>
                 <Link href={s.link} className="btn-secondary" style={{ padding: '0.6rem 1.25rem', fontSize: '0.875rem' }}>
@@ -305,9 +367,9 @@ export default function HomePage() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
             <div>
               <div style={{ color: '#93B4FF', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Get In Touch</div>
-              <h2 className="heading-1" style={{ color: 'white', marginBottom: '1.25rem' }}>Let's talk about your mortgage</h2>
+              <h2 className="heading-1" style={{ color: 'white', marginBottom: '1.25rem' }}>Let's talk about your lending goals</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', marginBottom: '2.5rem', lineHeight: 1.7 }}>
-                Ready to take the next step? Our team of experts is here to help you navigate the mortgage process with confidence.
+                Ready to take the next step? Our experienced lending specialists are here to guide you through every stage of your finance journey with confidence.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 {[
@@ -315,7 +377,7 @@ export default function HomePage() {
                   { icon: <MapPin size={18} />, label: 'Brisbane', val: 'Suite 1.8, 7 Clunies Ross Court, Eight Mile Plains QLD 4113' },
                   { icon: <MapPin size={18} />, label: 'Hobart', val: 'Level 1/22 Liverpool Street, Hobart TAS 7000' },
                   { icon: <Mail size={18} />, label: 'Email', val: 'info@omlending.com.au' },
-                  { icon: <Phone size={18} />, label: 'Hours', val: 'Mon–Fri 10:00 am – 06:00 pm · Sat/Sun Closed' },
+                  { icon: <Phone size={18} />, label: 'Hours', val: 'Mon–Fri 10:00 am -06:00 pm · Sat/Sun Closed' },
                 ].map(c => (
                   <div key={c.label} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                     <div style={{ color: '#93B4FF', marginTop: 2, flexShrink: 0 }}>{c.icon}</div>
@@ -364,8 +426,8 @@ export default function HomePage() {
         <div className="container" style={{ padding: '4rem 2rem 0' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '3rem', paddingBottom: '3rem' }}>
             <div>
-              <div className="footer-brand">Open Mortgage</div>
-              <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem', maxWidth: 280 }}>Your trusted partner for mortgage solutions in Sydney, Brisbane, and Hobart.</p>
+              <div className="footer-brand">Open Lending</div>
+              <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem', maxWidth: 280 }}>Your trusted partner for lending solutions in Sydney, Brisbane, and Hobart.</p>
             </div>
             <div>
               <div className="footer-heading">Services</div>
@@ -389,7 +451,7 @@ export default function HomePage() {
         </div>
         <div className="footer-bottom">
           <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
-            <span>© 2026 Open Mortgage. All rights reserved.</span>
+            <span>© 2026 Open Lending. All rights reserved.</span>
             <span>Credit Representative · Australian Credit Licence</span>
           </div>
         </div>
@@ -397,3 +459,4 @@ export default function HomePage() {
     </>
   )
 }
+

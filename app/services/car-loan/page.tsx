@@ -3,15 +3,15 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { CheckCircle, ArrowRight, ChevronRight, Car } from 'lucide-react'
 
-export const metadata = { title: 'Car Loan - Open Mortgage', description: 'Competitive car finance with fast approvals and flexible terms.' }
+export const metadata = { title: 'Car Loan - Open Lending', description: 'Competitive car finance with fast approvals and flexible terms.' }
 
 const loanTypes = [
   { title: 'New Car Finance', desc: 'Finance a brand-new vehicle from a dealership with competitive rates and same-day pre-approval so you negotiate with confidence.' },
   { title: 'Used Car Finance', desc: 'Quality used vehicles up to 10 years old. We find lenders with flexible policies for private sales and dealer purchases alike.' },
-  { title: 'Chattel Mortgage', desc: 'For business use vehicles — own the car from day one while enjoying GST and depreciation benefits. Ideal for ABN holders.' },
+  { title: 'Chattel Mortgage', desc: 'For business use vehicles �?own the car from day one while enjoying GST and depreciation benefits. Ideal for ABN holders.' },
   { title: 'Car Lease', desc: 'Fixed monthly payments with an option to purchase at the end of the term. Great for managing cash flow.' },
   { title: 'Novated Lease', desc: 'Salary-packaging your car through your employer to save on GST and reduce taxable income.' },
-  { title: 'Refinance', desc: 'Already have a car loan? We compare your current rate against the market — many clients save hundreds each year.' },
+  { title: 'Refinance', desc: 'Already have a car loan? We compare your current rate against the market �?many clients save hundreds each year.' },
 ]
 
 const benefits = [
@@ -26,7 +26,7 @@ const benefits = [
 const faqs = [
   { q: 'Can I get pre-approved before visiting a dealership?', a: 'Yes. Pre-approval lets you know exactly what you can spend before you walk in, giving you stronger negotiating power. We can have a pre-approval letter ready within hours for most applicants.' },
   { q: 'Do I need a good credit score?', a: 'A strong credit history helps, but we work with a panel of lenders that includes specialist lenders for non-standard credit profiles. We assess your full situation, not just your score.' },
-  { q: 'Can I finance a private sale vehicle?', a: 'Yes. Many lenders will finance private sale purchases. There are some age and condition restrictions — we will clarify these when we assess your application.' },
+  { q: 'Can I finance a private sale vehicle?', a: 'Yes. Many lenders will finance private sale purchases. There are some age and condition restrictions �?we will clarify these when we assess your application.' },
   { q: 'Is a deposit required?', a: 'Not always. Many car loans are available with no deposit required, especially for new vehicles. A deposit can lower your rate and repayments, but it is not mandatory.' },
 ]
 
@@ -54,7 +54,7 @@ export default function CarLoanPage() {
             Drive away sooner with<br /><span style={{ color: '#93B4FF' }}>smarter car finance</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.15rem', lineHeight: 1.75, maxWidth: 540, marginBottom: '2.5rem' }}>
-            Fast pre-approvals, competitive rates, and flexible terms for new and used vehicles — personal or business use.
+            Fast pre-approvals, competitive rates, and flexible terms for new and used vehicles �?personal or business use.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <Link href="/#contact" className="btn-primary">Get Pre-Approved <ArrowRight size={16} /></Link>
@@ -78,7 +78,7 @@ export default function CarLoanPage() {
             <div className="label">Finance Options</div>
             <div className="divider" style={{ margin: '1rem auto 1.5rem' }} />
             <h2 className="heading-1">Car finance for every situation</h2>
-            <p className="body-lg" style={{ maxWidth: 520, margin: '1rem auto 0' }}>Personal, business, new, or used — we have a product that fits.</p>
+            <p className="body-lg" style={{ maxWidth: 520, margin: '1rem auto 0' }}>Personal, business, new, or used �?we have a product that fits.</p>
           </div>
           <div className="grid-3">
             {loanTypes.map(f => (
@@ -120,7 +120,7 @@ export default function CarLoanPage() {
                 { label: 'Application', time: '10 mins' },
                 { label: 'Pre-approval', time: '2 hrs' },
                 { label: 'Full Approval', time: '24 hrs' },
-                { label: 'Settlement', time: '1–3 days' },
+                { label: 'Settlement', time: '1�? days' },
               ].map(s => (
                 <div key={s.label} style={{
                   background: 'white', borderRadius: '1rem', padding: '1.5rem',
@@ -172,3 +172,4 @@ export default function CarLoanPage() {
     </>
   )
 }
+

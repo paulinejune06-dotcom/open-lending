@@ -3,12 +3,12 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { CheckCircle, ArrowRight, ChevronRight } from 'lucide-react'
 
-export const metadata = { title: 'Home Loan - Open Mortgage', description: 'Expert home loan solutions for first home buyers, upgraders, and refinancers.' }
+export const metadata = { title: 'Home Loan - Open Lending', description: 'Expert home loan solutions for first home buyers, upgraders, and refinancers.' }
 
 const features = [
   { title: 'First Home Buyer', desc: 'Navigate grants, LMI waivers, and stamp duty concessions with expert guidance tailored to first-time buyers.' },
   { title: 'Refinancing', desc: 'Lower your rate, access equity, or consolidate debt. We compare your current loan against 50+ lenders to find savings.' },
-  { title: 'Investment Property', desc: 'Structure your investment loan to maximise tax efficiency and cash flow — interest-only, offset, or split options.' },
+  { title: 'Investment Property', desc: 'Structure your investment loan to maximise tax efficiency and cash flow �?interest-only, offset, or split options.' },
   { title: 'Construction Loans', desc: 'Progressive drawdown loans that match your build schedule, keeping interest costs low during construction.' },
   { title: 'Upgraders', desc: "Selling and buying simultaneously? We coordinate bridging finance so you don't miss your next home." },
   { title: 'Guarantor Loans', desc: 'Help from family can unlock a faster path to ownership. We structure guarantor arrangements safely for all parties.' },
@@ -16,14 +16,14 @@ const features = [
 
 const steps = [
   { n: 1, title: 'Assess Your Position', desc: 'We review income, expenses, credit history, and deposit to map your true borrowing power.' },
-  { n: 2, title: 'Select the Right Lender', desc: 'We shortlist lenders whose policy, pricing, and product actually fit your scenario — not just the lowest rate.' },
+  { n: 2, title: 'Select the Right Lender', desc: 'We shortlist lenders whose policy, pricing, and product actually fit your scenario �?not just the lowest rate.' },
   { n: 3, title: 'Prepare Your Application', desc: 'Complete document package, pre-empting every question a credit assessor is likely to ask.' },
   { n: 4, title: 'Approval & Settlement', desc: 'We manage the lender, conveyancer, and real estate agent to keep your settlement on track.' },
 ]
 
 const faqs = [
-  { q: 'How much deposit do I need?', a: 'Most lenders require at least 5–10% of the purchase price. A 20% deposit avoids Lenders Mortgage Insurance (LMI), but we can help you purchase with less using LMI or a guarantor.' },
-  { q: 'How long does approval take?', a: 'Conditional approval can come within 24–48 hours for straightforward applications. Full approval typically takes 3–5 business days once all documents are submitted.' },
+  { q: 'How much deposit do I need?', a: 'Most lenders require at least 5�?0% of the purchase price. A 20% deposit avoids Lenders Mortgage Insurance (LMI), but we can help you purchase with less using LMI or a guarantor.' },
+  { q: 'How long does approval take?', a: 'Conditional approval can come within 24�?8 hours for straightforward applications. Full approval typically takes 3�? business days once all documents are submitted.' },
   { q: 'What documents will I need?', a: 'Generally: last 2 payslips, last 2 years tax returns (self-employed), 3 months bank statements, ID, and a signed contract of sale. We guide you through exactly what is needed for your situation.' },
   { q: 'Fixed or variable rate?', a: 'Depends on your risk appetite and plans. Fixed gives certainty; variable offers flexibility and often features like offset accounts. Many clients choose a split loan to balance both.' },
 ]
@@ -52,7 +52,7 @@ export default function HomeLoanPage() {
             The right home loan,<br /><span style={{ color: '#93B4FF' }}>structured for you</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.15rem', lineHeight: 1.75, maxWidth: 560, marginBottom: '2.5rem' }}>
-            Whether you are buying your first home, upgrading, investing, or refinancing — we find the right loan structure and lender for your exact situation.
+            Whether you are buying your first home, upgrading, investing, or refinancing �?we find the right loan structure and lender for your exact situation.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <Link href="/#contact" className="btn-primary">Get Started <ArrowRight size={16} /></Link>
@@ -61,7 +61,7 @@ export default function HomeLoanPage() {
 
           {/* quick stats */}
           <div style={{ display: 'flex', gap: '3rem', marginTop: '4rem', flexWrap: 'wrap' }}>
-            {[['From 5%', 'Min. Deposit'], ['24–48hr', 'Conditional Approval'], ['50+', 'Lenders Compared']].map(([n, l]) => (
+            {[['From 5%', 'Min. Deposit'], ['24�?8hr', 'Conditional Approval'], ['50+', 'Lenders Compared']].map(([n, l]) => (
               <div key={l}>
                 <div style={{ color: 'white', fontWeight: 800, fontSize: '1.75rem', letterSpacing: '-0.03em' }}>{n}</div>
                 <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', marginTop: 2 }}>{l}</div>
@@ -130,7 +130,7 @@ export default function HomeLoanPage() {
               <div className="divider" />
               <h2 className="heading-1" style={{ marginBottom: '1.25rem' }}>Competitive rates across our lender panel</h2>
               <p className="body-lg" style={{ marginBottom: '2rem' }}>
-                We do not lock you into one lender. We compare rates and policy across our full panel to find the best fit — not just the lowest headline rate.
+                We do not lock you into one lender. We compare rates and policy across our full panel to find the best fit �?not just the lowest headline rate.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
                 {[
@@ -208,3 +208,4 @@ export default function HomeLoanPage() {
     </>
   )
 }
+

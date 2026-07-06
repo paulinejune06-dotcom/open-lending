@@ -41,7 +41,7 @@ export default function ContactPage() {
             <span style={{ color: '#93B4FF', fontSize: '0.85rem' }}>Contact Us</span>
           </div>
           <div className="pill" style={{ marginBottom: '1.25rem' }}>📞 Get In Touch</div>
-          <h1 className="heading-1" style={{ color: 'white', marginBottom: '0.75rem' }}>Let's talk about your mortgage</h1>
+          <h1 className="heading-1" style={{ color: 'white', marginBottom: '0.75rem' }}>Let's talk about your lending goals</h1>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: 520, lineHeight: 1.75 }}>
             Book a free strategy call or send us a message. Our team typically responds within one business day.
           </p>
@@ -101,7 +101,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--navy)', display: 'block', marginBottom: '0.4rem' }}>How can we help? *</label>
-                      <textarea required rows={5} placeholder="Tell us about your situation — property type, loan amount, timeline, or any questions you have..." value={form.message}
+                      <textarea required rows={5} placeholder="Tell us about your situation �?property type, loan amount, timeline, or any questions you have..." value={form.message}
                         onChange={e => setForm({ ...form, message: e.target.value })}
                         style={{ width: '100%', padding: '0.75rem 1rem', border: '1.5px solid var(--border)', borderRadius: '0.5rem', fontSize: '0.95rem', outline: 'none', resize: 'vertical', fontFamily: 'inherit' }} />
                     </div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                   {[
                     { icon: <Mail size={18} />, label: 'Email', val: 'info@omlending.com.au' },
-                    { icon: <Clock size={18} />, label: 'Business Hours', val: 'Mon–Fri 10:00 am – 6:00 pm' },
+                    { icon: <Clock size={18} />, label: 'Business Hours', val: 'Mon–Fri 10:00 am �?6:00 pm' },
                     { icon: <Phone size={18} />, label: 'Response Time', val: 'Within 1 business day' },
                   ].map(c => (
                     <div key={c.label} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                     { n: 1, text: 'We review your enquiry and match you with the right specialist' },
                     { n: 2, text: 'A specialist calls to understand your situation in detail (30 min)' },
                     { n: 3, text: 'We prepare a written strategy with lender options and next steps' },
-                    { n: 4, text: 'You decide if you want to proceed — no obligation' },
+                    { n: 4, text: 'You decide if you want to proceed �?no obligation' },
                   ].map(s => (
                     <div key={s.n} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                       <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'var(--blue)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 700, flexShrink: 0 }}>{s.n}</div>
@@ -216,7 +216,7 @@ export default function ContactPage() {
               { q: 'Is the initial consultation free?', a: 'Yes, completely free. The strategy call has no cost and no obligation. We give you honest advice regardless of whether you choose to proceed with us.' },
               { q: 'How quickly will you respond?', a: 'We aim to respond to all enquiries within one business day. For urgent matters, please call us directly at your nearest office.' },
               { q: 'Do I need to visit an office?', a: 'No. We work with clients Australia-wide via phone and video call. In-person meetings are available at our Sydney, Brisbane, and Hobart offices if preferred.' },
-              { q: 'What should I prepare before calling?', a: 'Nothing formal — just a rough idea of your goal (buying, refinancing, investing) and your current situation. We will guide you through what we need from there.' },
+              { q: 'What should I prepare before calling?', a: 'Nothing formal �?just a rough idea of your goal (buying, refinancing, investing) and your current situation. We will guide you through what we need from there.' },
             ].map(f => (
               <div key={f.q} className="card" style={{ padding: '1.75rem' }}>
                 <h3 style={{ fontWeight: 700, color: 'var(--navy)', marginBottom: '0.75rem', fontSize: '1rem' }}>{f.q}</h3>
@@ -231,3 +231,4 @@ export default function ContactPage() {
     </>
   )
 }
+

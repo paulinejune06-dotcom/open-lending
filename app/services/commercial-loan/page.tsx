@@ -3,13 +3,13 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { CheckCircle, ArrowRight, ChevronRight, Building2 } from 'lucide-react'
 
-export const metadata = { title: 'Commercial Loan - Open Mortgage', description: 'Business lending solutions for property, equipment, and working capital.' }
+export const metadata = { title: 'Commercial Loan - Open Lending', description: 'Business lending solutions for property, equipment, and working capital.' }
 
 const products = [
   { title: 'Commercial Property', desc: 'Purchase or refinance office, retail, industrial, or mixed-use property. We access both bank and non-bank commercial lenders.' },
   { title: 'Business Equipment Finance', desc: 'Fund machinery, vehicles, or technology with equipment loans, chattel mortgages, or leases structured for your cash flow.' },
   { title: 'Working Capital', desc: 'Business overdrafts, debtor finance, and short-term loans to keep operations moving through growth or seasonal gaps.' },
-  { title: 'Development Finance', desc: 'Construction and development funding for residential, commercial, or mixed-use projects — from pre-sales to completion.' },
+  { title: 'Development Finance', desc: 'Construction and development funding for residential, commercial, or mixed-use projects �?from pre-sales to completion.' },
   { title: 'SMSF Lending', desc: 'Purchase investment property inside your self-managed super fund with a limited recourse borrowing arrangement (LRBA).' },
   { title: 'Refinance & Restructure', desc: 'Review your existing business debt. We often find significant savings or improved terms for clients who have not reviewed recently.' },
 ]
@@ -19,15 +19,15 @@ const industries = ['Retail & Hospitality','Healthcare & Allied Health','Constru
 const process = [
   { n: 1, title: 'Business Assessment', desc: 'We review your financials, business structure, and objectives to understand what the right loan looks like for your situation.' },
   { n: 2, title: 'Lender Matching', desc: 'Commercial lending is highly policy-specific. We shortlist lenders based on your industry, loan type, and risk profile.' },
-  { n: 3, title: 'Credit Packaging', desc: 'We prepare a comprehensive credit submission — financials, projections, security details — to give your application the best chance of approval.' },
+  { n: 3, title: 'Credit Packaging', desc: 'We prepare a comprehensive credit submission �?financials, projections, security details �?to give your application the best chance of approval.' },
   { n: 4, title: 'Approval & Drawdown', desc: 'We manage the approval process, coordinate with solicitors, and ensure funds are drawn down efficiently.' },
 ]
 
 const faqs = [
-  { q: 'What LVR can I borrow to for commercial property?', a: 'Most lenders will lend up to 65–70% LVR for commercial property. Some specialist lenders may go higher with additional security or a strong borrower profile.' },
+  { q: 'What LVR can I borrow to for commercial property?', a: 'Most lenders will lend up to 65�?0% LVR for commercial property. Some specialist lenders may go higher with additional security or a strong borrower profile.' },
   { q: 'Do I need two years of financials?', a: 'Generally yes, but there are low-doc and alt-doc options for established businesses with strong cash flow. We assess the full picture, not just your tax returns.' },
   { q: 'Can a trust or company be the borrower?', a: 'Absolutely. Most commercial lending is structured through companies or trusts. We work with the entity structure that best suits your situation and tax position.' },
-  { q: 'How long does commercial approval take?', a: 'Commercial deals typically take 2–4 weeks from submission to approval. Complex deals or development finance may take longer. We set realistic timelines upfront.' },
+  { q: 'How long does commercial approval take?', a: 'Commercial deals typically take 2�? weeks from submission to approval. Complex deals or development finance may take longer. We set realistic timelines upfront.' },
 ]
 
 export default function CommercialLoanPage() {
@@ -55,14 +55,14 @@ export default function CommercialLoanPage() {
             Business lending that<br /><span style={{ color: '#93B4FF' }}>moves at your pace</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.15rem', lineHeight: 1.75, maxWidth: 560, marginBottom: '2.5rem' }}>
-            From commercial property to equipment finance and working capital — we structure business lending that supports your growth, not just your balance sheet.
+            From commercial property to equipment finance and working capital �?we structure business lending that supports your growth, not just your balance sheet.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <Link href="/#contact" className="btn-primary">Speak to a Specialist <ArrowRight size={16} /></Link>
             <Link href="#products" className="btn-outline-white">View Products</Link>
           </div>
           <div style={{ display: 'flex', gap: '3rem', marginTop: '4rem', flexWrap: 'wrap' }}>
-            {[['65–70%', 'LVR Commercial'], ['2–4 wks', 'Avg. Approval'], ['$50K+', 'Loan Size']].map(([n, l]) => (
+            {[['65�?0%', 'LVR Commercial'], ['2�? wks', 'Avg. Approval'], ['$50K+', 'Loan Size']].map(([n, l]) => (
               <div key={l}>
                 <div style={{ color: 'white', fontWeight: 800, fontSize: '1.75rem', letterSpacing: '-0.03em' }}>{n}</div>
                 <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', marginTop: 2 }}>{l}</div>
@@ -148,7 +148,7 @@ export default function CommercialLoanPage() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
             <div>
-              <div className="label">Why Open Mortgage</div>
+              <div className="label">Why Open Lending</div>
               <div className="divider" />
               <h2 className="heading-1" style={{ marginBottom: '1.25rem' }}>Commercial specialists, not generalists</h2>
               <p className="body-lg" style={{ marginBottom: '2rem' }}>
@@ -228,3 +228,4 @@ export default function CommercialLoanPage() {
     </>
   )
 }
+

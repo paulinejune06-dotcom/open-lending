@@ -78,7 +78,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <div style={{ display: 'flex', gap: '1.5rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem' }}>
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}><Clock size={14} />{post.readTime}</span>
             <span>{post.date}</span>
-            <span>Open Mortgage Team</span>
+            <span>Open Lending Team</span>
           </div>
         </div>
       </section>
