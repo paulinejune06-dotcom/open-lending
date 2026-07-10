@@ -128,18 +128,22 @@ export default function AboutPage() {
 
             {/* Image placeholder + quote */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <div style={{
-                width: '100%', aspectRatio: '4/3',
-                background: 'linear-gradient(135deg, var(--sky) 0%, #D6E4FF 100%)',
-                borderRadius: '1.25rem',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                color: 'var(--blue)', fontSize: '0.85rem', opacity: 0.6
-              }}>Team / Office Photo Placeholder</div>
+              <img
+                src="/images/about/team.png"
+                alt="Open Lending Office"
+                style={{
+                  width: "100%",
+                  aspectRatio: "4 / 3",
+                  objectFit: "cover",
+                  borderRadius: "1.25rem",
+                  boxShadow: "0 18px 40px rgba(0,0,0,0.12)",
+                  display: "block",
+                }}
+              />
               <div style={{ background: 'var(--navy)', borderRadius: '1rem', padding: '1.75rem' }}>
                 <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem', lineHeight: 1.7, fontStyle: 'italic', marginBottom: '1rem' }}>
                   "We measure success not by how many loans we write, but by how many clients genuinely feel they made the right decision - five years later."
                 </p>
-                <div style={{ color: '#93B4FF', fontWeight: 600, fontSize: '0.875rem' }}>- Kevin Zhang, Director</div>
               </div>
             </div>
           </div>

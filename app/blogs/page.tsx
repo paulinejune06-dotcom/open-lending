@@ -9,7 +9,7 @@ const posts = [
   {
     slug: 'how-much-can-i-borrow',
     title: 'How Much Can I Borrow? A Practical Guide for 2025',
-    excerpt: 'Lenders look at far more than just your income when assessing your borrowing capacity. We break down the key factors that determine how much you can borrow �?and what you can do to improve it.',
+    excerpt: 'Lenders look at far more than just your income when assessing your borrowing capacity. We break down the key factors that determine how much you can borrow -and what you can do to improve it.',
     category: 'Home Loans',
     readTime: '6 min read',
     date: 'June 18, 2025',
@@ -36,7 +36,7 @@ const posts = [
   {
     slug: 'refinancing-checklist',
     title: 'The Refinancing Checklist: 7 Things to Do Before You Switch Lenders',
-    excerpt: 'Refinancing can save thousands �?but only if you do it right. Here is a practical checklist to work through before making the switch.',
+    excerpt: 'Refinancing can save thousands -but only if you do it right. Here is a practical checklist to work through before making the switch.',
     category: 'Refinancing',
     readTime: '5 min read',
     date: 'April 24, 2025',
@@ -45,7 +45,7 @@ const posts = [
   {
     slug: 'investment-loan-structure',
     title: 'How to Structure Your Investment Loan for Maximum Tax Efficiency',
-    excerpt: 'The structure of your investment loan matters as much as the rate. We explain the key decisions �?interest only, offset, cross-collateralisation �?and what each means for your returns.',
+    excerpt: 'The structure of your investment loan matters as much as the rate. We explain the key decisions -interest only, offset, cross-collateralisation -and what each means for your returns.',
     category: 'Investment',
     readTime: '7 min read',
     date: 'April 8, 2025',
@@ -54,7 +54,7 @@ const posts = [
   {
     slug: 'commercial-property-finance',
     title: 'Commercial Property Finance: What Lenders Actually Look For',
-    excerpt: 'Commercial lending is assessed very differently to residential. Understanding what lenders prioritise �?and how to present your application �?makes a significant difference to outcome.',
+    excerpt: 'Commercial lending is assessed very differently to residential. Understanding what lenders prioritise -and how to present your application -makes a significant difference to outcome.',
     category: 'Commercial',
     readTime: '6 min read',
     date: 'March 20, 2025',
@@ -63,7 +63,7 @@ const posts = [
   {
     slug: 'offset-account-guide',
     title: 'Offset Accounts Explained: Are They Worth It?',
-    excerpt: 'Offset accounts can save significant interest over the life of a loan �?but they are not right for everyone. We break down how they work and when to use them.',
+    excerpt: 'Offset accounts can save significant interest over the life of a loan -but they are not right for everyone. We break down how they work and when to use them.',
     category: 'Home Loans',
     readTime: '4 min read',
     date: 'March 5, 2025',
