@@ -494,7 +494,7 @@ export default function HomePage() {
                   { icon: <MapPin size={18} />, label: 'Sydney', val: '1211/87-89 Liverpool Street, Sydney NSW 2000' },
                   { icon: <MapPin size={18} />, label: 'Brisbane', val: 'Suite 1.8, 7 Clunies Ross Court, Eight Mile Plains QLD 4113' },
                   { icon: <MapPin size={18} />, label: 'Hobart', val: 'Level 1/22 Liverpool Street, Hobart TAS 7000' },
-                  { icon: <Mail size={18} />, label: 'Email', val: 'info@omlending.com.au' },
+                  { icon: <Mail size={18} />, label: 'Email', val: 'info@openlendinggroup.com.au' },
                   { icon: null, label: 'Hours', val: 'Mon–Fri 10:00 am – 06:00 pm · Sat/Sun Closed' },
                 ].map((c) => (
                   <div key={c.label} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
