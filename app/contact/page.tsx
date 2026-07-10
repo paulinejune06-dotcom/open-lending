@@ -124,7 +124,7 @@ export default function ContactPage() {
                 <h3 className="heading-3" style={{ color: 'var(--navy)', marginBottom: '1.5rem' }}>Contact Information</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                   {[
-                    { icon: <Mail size={18} />, label: 'Email', val: 'info@omlending.com.au' },
+                    { icon: <Mail size={18} />, label: 'Email', val: 'info@openlendinggroup.com.au' },
                     { icon: <Clock size={18} />, label: 'Business Hours', val: 'Mon–Fri 10:00 am -6:00 pm' },
                     { icon: <Phone size={18} />, label: 'Response Time', val: 'Within 1 business day' },
                   ].map(c => (

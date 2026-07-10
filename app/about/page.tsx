@@ -269,7 +269,7 @@ export default function AboutPage() {
 
           <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', marginTop: '3rem', flexWrap: 'wrap' }}>
             {[
-              { icon: <Mail size={18} />, label: 'info@omlending.com.au' },
+              { icon: <Mail size={18} />, label: 'info@openlendinggroup.com.au' },
               { icon: <Phone size={18} />, label: 'Mon–Fri 10:00 am -6:00 pm' },
             ].map(c => (
               <div key={c.label} style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', color: 'var(--muted)', fontSize: '0.9rem' }}>
