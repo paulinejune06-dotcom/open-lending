@@ -275,7 +275,7 @@ export default function HomePage() {
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link href="/contact" className="btn-primary">Book a Strategy Call</Link>
-              <Link href="/#process" className="btn-outline-white">See Our Process</Link>
+              <Link href="/process" className="btn-outline-white">See Our Process</Link>
             </div>
           </div>
         </div>
