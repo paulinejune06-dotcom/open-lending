@@ -9,10 +9,11 @@ export default function Navbar() {
     <>
       <nav>
         <div className="container nav-inner">
-          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <img src="/opl.png" alt="Open Lending" style={{ height: 105 }} />
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+            <img src="/opl.png" alt="Open Lending" style={{ height: 48 }} />
           </Link>
           <div className="nav-links">
+            <Link href="/" className="nav-link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</Link>
             <Link href="/#services" className="nav-link">Services</Link>
             <Link href="/process" className="nav-link">Our Process</Link>
             <Link href="/#resources" className="nav-link">Resources</Link>

@@ -79,7 +79,6 @@ export default function AboutPage() {
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <Link href="/contact" className="btn-primary">Work With Us <ArrowRight size={16} /></Link>
-            <Link href="#team" className="btn-outline-white">Meet the Team</Link>
           </div>
 
           {/* Stats */}
@@ -201,45 +200,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* TEAM */}
-      <section className="section" id="team" style={{ background: 'var(--sky)' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div className="label">The People</div>
-            <div className="divider" style={{ margin: '1rem auto 1.5rem' }} />
-            <h2 className="heading-1">Meet the team</h2>
-            <p className="body-lg" style={{ maxWidth: 520, margin: '1rem auto 0' }}>
-              Experienced specialists who take ownership of your outcome from first call to settlement.
-            </p>
-          </div>
-          <div className="grid-3">
-            {team.map(t => (
-              <div key={t.name} className="card" style={{ background: 'white' }}>
-                {/* Avatar placeholder */}
-                <div style={{
-                  width: 80, height: 80, borderRadius: '50%',
-                  background: 'linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  marginBottom: '1.25rem',
-                  color: 'white', fontWeight: 800, fontSize: '1.5rem'
-                }}>{t.name.split(' ').map(n => n[0]).join('')}</div>
-                <h3 className="heading-3" style={{ color: 'var(--navy)', marginBottom: '0.25rem' }}>{t.name}</h3>
-                <div style={{ color: 'var(--blue)', fontSize: '0.85rem', fontWeight: 600, marginBottom: '1rem' }}>{t.role}</div>
-                <p className="body" style={{ fontSize: '0.875rem', marginBottom: '1.25rem' }}>{t.bio}</p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                  {t.credentials.map(c => (
-                    <div key={c} style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                      <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--blue)', flexShrink: 0 }} />
-                      <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>{c}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* OFFICES */}
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container">
@@ -251,13 +211,6 @@ export default function AboutPage() {
           <div className="grid-3">
             {offices.map(o => (
               <div key={o.city} className="card" style={{ textAlign: 'center' }}>
-                <div style={{
-                  width: '100%', aspectRatio: '16/9',
-                  background: 'linear-gradient(135deg, var(--sky) 0%, #D6E4FF 100%)',
-                  borderRadius: '0.75rem', marginBottom: '1.5rem',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  color: 'var(--blue)', fontSize: '0.8rem', opacity: 0.6
-                }}>Map / Photo Placeholder</div>
                 <h3 className="heading-3" style={{ color: 'var(--navy)', marginBottom: '0.75rem' }}>{o.city}</h3>
                 <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start', justifyContent: 'center' }}>
                   <MapPin size={16} color="var(--blue)" style={{ flexShrink: 0, marginTop: 2 }} />
