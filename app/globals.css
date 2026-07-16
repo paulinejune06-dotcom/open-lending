@@ -142,11 +142,11 @@ nav {
     height: 2px;
 
     background: linear-gradient(
-        180deg,
-    #FFFFFF,
-    #FCFCFD
+        90deg,
+        #7A4DFF,
+        #A855F7
     );
-
+    border-radius: 999px;
     transition: width .25s ease;
 }
 
