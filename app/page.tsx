@@ -56,6 +56,44 @@ export default function HomePage() {
         </div>
       </nav>
 
+      {menuOpen && (
+  <div className="mobile-menu">
+
+    <Link href="/" onClick={()=>setMenuOpen(false)}>
+      Home
+    </Link>
+
+    <Link href="/#services" onClick={()=>setMenuOpen(false)}>
+      Services
+    </Link>
+
+    <Link href="/process" onClick={()=>setMenuOpen(false)}>
+      Our Process
+    </Link>
+
+    <Link href="/#resources" onClick={()=>setMenuOpen(false)}>
+      Resources
+    </Link>
+
+    <Link href="/about" onClick={()=>setMenuOpen(false)}>
+      About
+    </Link>
+
+    <Link href="/contact" onClick={()=>setMenuOpen(false)}>
+      Contact
+    </Link>
+
+    <Link
+      href="/contact"
+      className="btn-primary"
+      onClick={()=>setMenuOpen(false)}
+    >
+      Book a Call
+    </Link>
+
+  </div>
+)}
+
       {/* HERO */}
       <section
         className="hero"
@@ -576,7 +614,7 @@ export default function HomePage() {
 
             <div>
               <div className="footer-heading">More</div>
-              {[['About Us', '/about'], ['Contact Us', '/contact'], ['FAQ', '/faq'], ['Blogs', '/blogs']].map(([l, h]) => (
+              {[['About Us', '/about'], ['Contact Us', '/contact'], ['FAQ', '/faq']].map(([l, h]) => (
                 <Link key={l} href={h} className="footer-link">{l}</Link>
               ))}
             </div>

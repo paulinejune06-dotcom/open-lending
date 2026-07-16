@@ -164,6 +164,99 @@ nav {
   border: none;
   box-shadow: none;
 }
+.mobile-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  color: #374151;
+
+  border: none;
+  padding: 0.5rem;
+
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+
+  position: fixed;
+  top: 120px;
+  left: 0;
+  right: 0;
+
+  z-index: 99;
+
+  flex-direction: column;
+  gap: 0.25rem;
+
+  padding: 1.25rem;
+
+  background: rgba(248, 249, 252, 0.98);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid var(--border);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-menu > a:not(.btn-primary) {
+  display: block;
+
+  color: #374151;
+
+  padding: 0.9rem 0.5rem;
+
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+
+  border-bottom: 1px solid rgba(224, 216, 236, 0.7);
+}
+
+.mobile-menu > a:not(.btn-primary):hover {
+  color: #7c3aed;
+}
+
+.mobile-book-button {
+  width: 100%;
+  justify-content: center;
+
+  margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  nav,
+  .nav-inner {
+    height: 80px;
+  }
+
+  .nav-logo {
+    height: 72px;
+    transform: none;
+  }
+
+  .mobile-menu {
+    top: 80px;
+  }
+}
 /* Stripe accent */
 .stripe-accent { position: relative; overflow: hidden; }
 .stripe-accent::before {

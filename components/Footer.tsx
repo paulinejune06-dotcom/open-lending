@@ -38,7 +38,6 @@ export default function Footer() {
               ['About Us', '/about'],
               ['Contact Us', '/contact'],
               ['FAQ', '/faq'],
-              ['Blogs', '/blogs'],
             ].map(([l, h]) => (
               <Link key={l} href={h} className="footer-link">{l}</Link>
             ))}
