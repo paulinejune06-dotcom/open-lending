@@ -33,8 +33,14 @@ export default function HomePage() {
       {/* NAV */}
       <nav>
         <div className="container nav-inner">
-          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-            <img src="/opl.png" alt="Open Lending" style={{ height: 48 }} />
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', background: "transparent" }}>
+            <img src="/opl.png" alt="Open Lending" style={{ height: 64, width: "auto",
+  display: "block",
+  transform: "scale(1.15)",
+  transformOrigin: "left center",
+    background: "transparent", padding: 0,
+          border: "none",
+          boxShadow: "none" }} />
           </Link>
 
           <div className="nav-links">

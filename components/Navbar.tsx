@@ -10,7 +10,7 @@ export default function Navbar() {
       <nav>
         <div className="container nav-inner">
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-            <img src="/opl.png" alt="Open Lending" style={{ height: 48 }} />
+            <img src="/opl.png" alt="Open Lending" style={{ height: 58 }} />
           </Link>
           <div className="nav-links">
             <Link href="/" className="nav-link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</Link>
