@@ -167,9 +167,7 @@ export default function HomePage() {
                   Free Consultation <ArrowRight size={16} />
                 </Link>
 
-                <Link href="/#process" className="btn-outline-white">
-                  See Our Process
-                </Link>
+                <Link href="/process" className="btn-outline-white">See Our Process</Link>
               </div>
 
               <div
