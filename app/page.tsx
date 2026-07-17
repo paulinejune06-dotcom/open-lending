@@ -277,46 +277,48 @@ export default function HomePage() {
       </section>
 
       {/* PROCESS */}
-      <section className="section" id="process" style={{ background: 'var(--white)' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div className="label">How It Works</div>
-            <div className="divider" style={{ margin: '1rem auto 1.5rem' }} />
-            <h2 className="heading-1">A transparent client journey</h2>
-            <p className="body-lg" style={{ maxWidth: 520, margin: '1rem auto 0' }}>
-              Every stage has a clear objective, expected deliverables, and practical next actions.
-            </p>
-          </div>
+<section className="section" id="process" style={{ background: 'var(--white)' }}>
+  <div className="container">
+    <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+      <div className="label">How It Works</div>
+      <div className="divider" style={{ margin: '1rem auto 1.5rem' }} />
+      <h2 className="heading-1">A transparent client journey</h2>
+      <p className="body-lg" style={{ maxWidth: 520, margin: '1rem auto 0' }}>
+        Six structured steps designed to remove uncertainty and keep you informed at every stage.
+      </p>
+    </div>
 
-          <div className="process-grid">
-            {[
-              { n: 1, title: 'Discovery & Positioning', desc: 'We clarify your goals, borrowing profile, and constraints to establish a realistic approval pathway.' },
-              { n: 2, title: 'Structuring & Lender Selection', desc: 'We compare lender policy, pricing, and product features to shortlist options that actually fit your scenario.' },
-              { n: 3, title: 'Application & Credit Management', desc: 'We prepare a complete submission package, anticipate key credit questions, and coordinate responses quickly.' },
-              { n: 4, title: 'Settlement & Ongoing Review', desc: 'After approval, we guide settlement and continue reviewing your loan structure as rates and life plans change.' },
-            ].map((step) => (
-              <div key={step.n} style={{ padding: '0 1.5rem', textAlign: 'center', position: 'relative' }}>
-                <div className="step-num" style={{ margin: '0 auto 1.5rem', position: 'relative', zIndex: 1 }}>{step.n}</div>
-                <h3 className="heading-3" style={{ marginBottom: '0.75rem', color: 'var(--navy)' }}>{step.title}</h3>
-                <p className="body" style={{ fontSize: '0.9rem' }}>{step.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div style={{ marginTop: '4rem', background: 'linear-gradient(135deg, var(--navy) 0%, #1B3A6B 100%)', borderRadius: '1.25rem', padding: '3rem', textAlign: 'center' }}>
-            <h3 className="heading-2" style={{ color: 'white', marginBottom: '0.75rem' }}>
-              Ready for a smarter lending experience?
-            </h3>
-            <p style={{ color: 'rgba(255,255,255,0.65)', marginBottom: '2rem', maxWidth: 480, margin: '0 auto 2rem' }}>
-              Share your current scenario and we will give you a structured action plan with clear recommendations.
-            </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/contact" className="btn-primary">Book a Strategy Call</Link>
-              <Link href="/process" className="btn-outline-white">See Our Process</Link>
-            </div>
-          </div>
+    <div className="grid-3" style={{ marginBottom: '3rem' }}>
+      {[
+        { n: '01', title: 'Search & Shortlist', desc: 'We filter and shortlist suitable loan options based on your deposit, repayment preferences, and risk profile.' },
+        { n: '02', title: 'Expert Consultation', desc: 'One-on-one session to review your income, goals, and borrowing capacity with a clear strategy outcome.' },
+        { n: '03', title: 'Application', desc: 'We prepare and submit a structured, credit-ready package to give your application the best chance of approval.' },
+        { n: '04', title: 'Tracking & Updating', desc: 'We actively monitor progress and manage lender communication so you always know where things stand.' },
+        { n: '05', title: 'Closing', desc: 'We coordinate settlement and walk you through loan terms, repayment setup, and signing requirements.' },
+        { n: '06', title: 'Post-Closing', desc: 'Ongoing loan health checks, refinancing reviews, and trusted partner referrals after settlement.' },
+      ].map(step => (
+        <div key={step.n} className="card" style={{ textAlign: 'center' }}>
+          <div style={{
+            width: 48, height: 48, borderRadius: '50%',
+            background: 'linear-gradient(135deg, #7B35C9 0%, #9B55E9 100%)',
+            color: 'white', fontWeight: 800, fontSize: '0.9rem',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            margin: '0 auto 1.25rem',
+            boxShadow: '0 2px 12px rgba(123,53,201,0.3)'
+          }}>{step.n}</div>
+          <h3 className="heading-3" style={{ marginBottom: '0.75rem', color: 'var(--navy)', fontSize: '1rem' }}>{step.title}</h3>
+          <p className="body" style={{ fontSize: '0.875rem' }}>{step.desc}</p>
         </div>
-      </section>
+      ))}
+    </div>
+
+    <div style={{ textAlign: 'center' }}>
+      <Link href="/process" className="btn-primary">
+        View Full Process <ArrowRight size={16} />
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* WHY CHOOSE US */}
       <section className="section" style={{ background: 'var(--sky)' }}>
