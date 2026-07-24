@@ -34,7 +34,7 @@ export default function HomePage() {
       <nav>
         <div className="container nav-inner">
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', background: "transparent" }}>
-            <img src="/opl.png" alt="Open Lending" className="nav-logo" />
+            <img src="/opl.svg" alt="Open Lending" className="nav-logo" />
           </Link>
 
           <div className="nav-links">
@@ -587,7 +587,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FOOTER */}
+    
       <footer>
         <div className="container" style={{ padding: '4rem 2rem 0' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '3rem', paddingBottom: '3rem' }}>

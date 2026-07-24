@@ -96,7 +96,7 @@ nav {
   right: 0;
 
   background: rgba(248,249,252,.82);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(6px);
 
   border-bottom: 1px solid rgba(255,255,255,0.08);
 
@@ -154,7 +154,7 @@ nav {
     width: 100%;
 }
 .nav-logo {
-  height: 126px;
+  height: 110px;
   width: auto;
   display: block;
   background: transparent;
