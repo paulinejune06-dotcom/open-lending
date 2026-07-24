@@ -16,6 +16,7 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={closeMenu}
+            className="nav-brand"
             style={{
               textDecoration: 'none',
               display: 'flex',
