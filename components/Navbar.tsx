@@ -24,7 +24,7 @@ export default function Navbar() {
             }}
           >
             <img
-              src="/opl.svg"
+              src="/opl.png"
               alt="Open Lending"
               className="nav-logo"
             />
