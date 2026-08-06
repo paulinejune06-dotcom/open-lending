@@ -1,12 +1,54 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, type FormEvent } from 'react'
 import Link from 'next/link'
 import { Home, Car, Building2, Mail, MapPin, ChevronRight, ArrowRight, Menu, X } from 'lucide-react'
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false)
+    const [contactLoading, setContactLoading] = useState(false)
+  const [contactSubmitted, setContactSubmitted] = useState(false)
 
+  const handleHomeContactSubmit = async (
+    e: FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault()
+
+    const formElement = e.currentTarget
+    const formData = new FormData(formElement)
+
+    setContactLoading(true)
+    setContactSubmitted(false)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          loanType: formData.get('loanType'),
+          message: formData.get('message'),
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      formElement.reset()
+      setContactSubmitted(true)
+    } catch (error) {
+      console.error('Homepage contact form error:', error)
+      alert('Failed to send message. Please try again.')
+    } finally {
+      setContactLoading(false)
+    }
+  }
+  
   const lenders = [
     { name: "ANZ", file: "anz.webp" },
     { name: "NAB", file: "nab.webp" },
@@ -518,75 +560,320 @@ export default function HomePage() {
       </section>
 
       {/* CONTACT */}
-      <section className="section" id="contact" style={{ background: 'var(--navy)' }}>
-        <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
-            <div>
-              <div style={{ color: '#93B4FF', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Get In Touch</div>
-              <h2 className="heading-1" style={{ color: 'white', marginBottom: '1.25rem' }}>Let's talk about your lending goals</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', marginBottom: '2.5rem', lineHeight: 1.7 }}>
-                Ready to take the next step? Our experienced lending specialists are here to guide you through every stage of your finance journey with confidence.
-              </p>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                {[
-                  { icon: <MapPin size={18} />, label: 'Sydney', val: '1211/87-89 Liverpool Street, Sydney NSW 2000' },
-                  { icon: <MapPin size={18} />, label: 'Brisbane', val: 'Suite 1.8, 7 Clunies Ross Court, Eight Mile Plains QLD 4113' },
-                  { icon: <MapPin size={18} />, label: 'Hobart', val: 'Level 1/22 Liverpool Street, Hobart TAS 7000' },
-                  { icon: <Mail size={18} />, label: 'Email', val: 'info@openlendinggroup.com.au' },
-                  { icon: null, label: 'Hours', val: 'Mon–Fri 10:00 am – 06:00 pm · Sat/Sun Closed' },
-                ].map((c) => (
-                  <div key={c.label} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                    <div style={{ color: '#93B4FF', marginTop: 2, flexShrink: 0 }}>
-                      {c.icon}
-                    </div>
-                    <div>
-                      <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 2 }}>{c.label}</div>
-                      <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.9rem' }}>{c.val}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div style={{ background: 'white', borderRadius: '1.25rem', padding: '2.5rem' }}>
-              <h3 className="heading-3" style={{ marginBottom: '1.5rem', color: 'var(--navy)' }}>Book a Strategy Call</h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                {[
-                  { id: 'name', label: 'Full Name', type: 'text', placeholder: 'John Smith' },
-                  { id: 'email', label: 'Email Address', type: 'email', placeholder: 'john@example.com' },
-                  { id: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+61 4xx xxx xxx' },
-                ].map((f) => (
-                  <div key={f.id}>
-                    <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--navy)', display: 'block', marginBottom: '0.4rem' }}>{f.label}</label>
-                    <input type={f.type} placeholder={f.placeholder} style={{ width: '100%', padding: '0.75rem 1rem', border: '1px solid var(--border)', borderRadius: '0.5rem', fontSize: '0.95rem', color: 'var(--text)', outline: 'none' }} />
-                  </div>
-                ))}
-
-                <div>
-                  <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--navy)', display: 'block', marginBottom: '0.4rem' }}>Loan Type</label>
-                  <select style={{ width: '100%', padding: '0.75rem 1rem', border: '1px solid var(--border)', borderRadius: '0.5rem', fontSize: '0.95rem', color: 'var(--text)', outline: 'none', background: 'white' }}>
-                    <option>Home Loan</option>
-                    <option>Car Loan</option>
-                    <option>Commercial Loan</option>
-                    <option>Refinance</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--navy)', display: 'block', marginBottom: '0.4rem' }}>Message</label>
-                  <textarea rows={4} placeholder="Tell us about your situation..." style={{ width: '100%', padding: '0.75rem 1rem', border: '1px solid var(--border)', borderRadius: '0.5rem', fontSize: '0.95rem', color: 'var(--text)', outline: 'none', resize: 'vertical', fontFamily: 'inherit' }} />
-                </div>
-
-                <button className="btn-primary" style={{ width: '100%', justifyContent: 'center', padding: '0.875rem' }}>
-                  Send Message <ArrowRight size={16} />
-                </button>
-              </div>
-            </div>
-          </div>
+      {/* CONTACT */}
+<section
+  className="section"
+  id="contact"
+  style={{ background: 'var(--navy)' }}
+>
+  <div className="container">
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '4rem',
+        alignItems: 'start',
+      }}
+    >
+      {/* CONTACT INFORMATION */}
+      <div>
+        <div
+          style={{
+            color: '#93B4FF',
+            fontSize: '0.8rem',
+            fontWeight: 600,
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            marginBottom: '0.75rem',
+          }}
+        >
+          Get In Touch
         </div>
-      </section>
 
+        <h2
+          className="heading-1"
+          style={{
+            color: 'white',
+            marginBottom: '1.25rem',
+          }}
+        >
+          Let&apos;s talk about your lending goals
+        </h2>
+
+        <p
+          style={{
+            color: 'rgba(255,255,255,0.65)',
+            marginBottom: '2.5rem',
+            lineHeight: 1.7,
+          }}
+        >
+          Ready to take the next step? Our experienced lending specialists
+          are here to guide you through every stage of your finance journey
+          with confidence.
+        </p>
+
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1.25rem',
+          }}
+        >
+          {[
+            {
+              icon: <MapPin size={18} />,
+              label: 'Sydney',
+              val: '1211/87-89 Liverpool Street, Sydney NSW 2000',
+            },
+            {
+              icon: <MapPin size={18} />,
+              label: 'Brisbane',
+              val: 'Suite 1.8, 7 Clunies Ross Court, Eight Mile Plains QLD 4113',
+            },
+            {
+              icon: <MapPin size={18} />,
+              label: 'Hobart',
+              val: 'Level 1/22 Liverpool Street, Hobart TAS 7000',
+            },
+            {
+              icon: <Mail size={18} />,
+              label: 'Email',
+              val: 'info@openlendinggroup.com.au',
+            },
+            {
+              icon: null,
+              label: 'Hours',
+              val: 'Mon–Fri 10:00 am – 06:00 pm · Sat/Sun Closed',
+            },
+          ].map((c) => (
+            <div
+              key={c.label}
+              style={{
+                display: 'flex',
+                gap: '1rem',
+                alignItems: 'flex-start',
+              }}
+            >
+              <div
+                style={{
+                  color: '#93B4FF',
+                  marginTop: 2,
+                  flexShrink: 0,
+                }}
+              >
+                {c.icon}
+              </div>
+
+              <div>
+                <div
+                  style={{
+                    color: 'rgba(255,255,255,0.4)',
+                    fontSize: '0.75rem',
+                    fontWeight: 600,
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
+                    marginBottom: 2,
+                  }}
+                >
+                  {c.label}
+                </div>
+
+                <div
+                  style={{
+                    color: 'rgba(255,255,255,0.8)',
+                    fontSize: '0.9rem',
+                  }}
+                >
+                  {c.val}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CONTACT FORM */}
+      <div
+        style={{
+          background: 'white',
+          borderRadius: '1.25rem',
+          padding: '2.5rem',
+        }}
+      >
+        <h3
+          className="heading-3"
+          style={{
+            marginBottom: '1.5rem',
+            color: 'var(--navy)',
+          }}
+        >
+          Book a Strategy Call
+        </h3>
+
+        <form
+          onSubmit={handleHomeContactSubmit}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
+          }}
+        >
+          {[
+            {
+              id: 'name',
+              label: 'Full Name',
+              type: 'text',
+              placeholder: 'John Smith',
+            },
+            {
+              id: 'email',
+              label: 'Email Address',
+              type: 'email',
+              placeholder: 'john@example.com',
+            },
+            {
+              id: 'phone',
+              label: 'Phone Number',
+              type: 'tel',
+              placeholder: '+61 4xx xxx xxx',
+            },
+          ].map((f) => (
+            <div key={f.id}>
+              <label
+                style={{
+                  fontSize: '0.85rem',
+                  fontWeight: 600,
+                  color: 'var(--navy)',
+                  display: 'block',
+                  marginBottom: '0.4rem',
+                }}
+              >
+                {f.label}
+              </label>
+
+              <input
+                name={f.id}
+                required={f.id === 'name' || f.id === 'email'}
+                type={f.type}
+                placeholder={f.placeholder}
+                style={{
+                  width: '100%',
+                  padding: '0.75rem 1rem',
+                  border: '1px solid var(--border)',
+                  borderRadius: '0.5rem',
+                  fontSize: '0.95rem',
+                  color: 'var(--text)',
+                  outline: 'none',
+                }}
+              />
+            </div>
+          ))}
+
+          <div>
+            <label
+              style={{
+                fontSize: '0.85rem',
+                fontWeight: 600,
+                color: 'var(--navy)',
+                display: 'block',
+                marginBottom: '0.4rem',
+              }}
+            >
+              Loan Type
+            </label>
+
+            <select
+              name="loanType"
+              defaultValue="Home Loan"
+              style={{
+                width: '100%',
+                padding: '0.75rem 1rem',
+                border: '1px solid var(--border)',
+                borderRadius: '0.5rem',
+                fontSize: '0.95rem',
+                color: 'var(--text)',
+                outline: 'none',
+                background: 'white',
+              }}
+            >
+              <option value="Home Loan">Home Loan</option>
+              <option value="Car Loan">Car Loan</option>
+              <option value="Commercial Loan">Commercial Loan</option>
+              <option value="Refinance">Refinance</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              style={{
+                fontSize: '0.85rem',
+                fontWeight: 600,
+                color: 'var(--navy)',
+                display: 'block',
+                marginBottom: '0.4rem',
+              }}
+            >
+              Message
+            </label>
+
+            <textarea
+              name="message"
+              required
+              rows={4}
+              placeholder="Tell us about your situation..."
+              style={{
+                width: '100%',
+                padding: '0.75rem 1rem',
+                border: '1px solid var(--border)',
+                borderRadius: '0.5rem',
+                fontSize: '0.95rem',
+                color: 'var(--text)',
+                outline: 'none',
+                resize: 'vertical',
+                fontFamily: 'inherit',
+              }}
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={contactLoading}
+            className="btn-primary"
+            style={{
+              width: '100%',
+              justifyContent: 'center',
+              padding: '0.875rem',
+              opacity: contactLoading ? 0.7 : 1,
+              cursor: contactLoading ? 'not-allowed' : 'pointer',
+            }}
+          >
+            {contactLoading ? (
+              'Sending...'
+            ) : (
+              <>
+                Send Message <ArrowRight size={16} />
+              </>
+            )}
+          </button>
+
+          {contactSubmitted && (
+            <p
+              style={{
+                color: '#16803c',
+                fontSize: '0.9rem',
+                textAlign: 'center',
+                fontWeight: 600,
+                margin: 0,
+              }}
+            >
+              Message sent successfully! We will contact you soon.
+            </p>
+          )}
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
     
       <footer>
         <div className="container" style={{ padding: '4rem 2rem 0' }}>
