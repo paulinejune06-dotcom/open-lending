@@ -11,17 +11,27 @@ export default function ContactPage() {
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    await new Promise(r => setTimeout(r, 1000))
-    setSubmitted(true)
-    setLoading(false)
+  e.preventDefault()
+  setLoading(true)
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    })
+    if (res.ok) {
+      setSubmitted(true)
+    } else {
+      alert('Failed to send message. Please try again.')
+    }
+  } catch {
+    alert('Failed to send message. Please try again.')
   }
+  setLoading(false)
+}
 
   const offices = [
-    { city: 'Sydney', address: '1211/87-89 Liverpool Street, Sydney NSW 2000', phone: '+61 2 XXXX XXXX' },
-    { city: 'Brisbane', address: 'Suite 1.8, 7 Clunies Ross Court, Eight Mile Plains QLD 4113', phone: '+61 7 XXXX XXXX' },
-    { city: 'Hobart', address: 'Level 1/22 Liverpool Street, Hobart TAS 7000', phone: '+61 3 XXXX XXXX' },
+    { city: 'Sydney', address: 'Level 12/87-89 Liverpool Street, Sydney NSW 2000', phone: '+61 2 XXXX XXXX' }
   ]
 
   return (
