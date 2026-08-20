@@ -280,7 +280,6 @@ export default function HomePage() {
                 { title: 'Post-settlement', desc: 'Ongoing loan review support' },
               ].map((f) => (
                 <div key={f.title} className="card" style={{ padding: '1.5rem' }}>
-                  <div style={{ fontSize: '1.75rem', marginBottom: '0.75rem' }}>{f.icon}</div>
                   <div className="heading-3" style={{ marginBottom: '0.4rem', fontSize: '0.95rem' }}>{f.title}</div>
                   <p className="body" style={{ fontSize: '0.85rem' }}>{f.desc}</p>
                 </div>
