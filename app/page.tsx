@@ -274,10 +274,10 @@ export default function HomePage() {
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               {[
-                { icon: '🏠', title: 'End-to-end Advisory', desc: 'Full coverage from discovery to settlement' },
-                { icon: '🏦', title: 'Multi-lender Panel', desc: 'Compare across 50+ lenders' },
-                { icon: '📊', title: 'Credit-aware', desc: 'Optimised submission quality' },
-                { icon: '🔄', title: 'Post-settlement', desc: 'Ongoing loan review support' },
+                { title: 'End-to-end Advisory', desc: 'Full coverage from discovery to settlement' },
+                { title: 'Multi-lender Panel', desc: 'Compare across 50+ lenders' },
+                { title: 'Credit-aware', desc: 'Optimised submission quality' },
+                { title: 'Post-settlement', desc: 'Ongoing loan review support' },
               ].map((f) => (
                 <div key={f.title} className="card" style={{ padding: '1.5rem' }}>
                   <div style={{ fontSize: '1.75rem', marginBottom: '0.75rem' }}>{f.icon}</div>
