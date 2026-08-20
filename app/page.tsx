@@ -560,11 +560,12 @@ export default function HomePage() {
       </section>
 
       {/* CONTACT */}
-      {/* CONTACT */}
 <section
   className="section"
   id="contact"
-  style={{ background: 'var(--navy)' }}
+  style={{
+    background: 'linear-gradient(135deg, var(--navy) 0%, #0D2347 60%, #1B3A6B 100%)',
+  }}
 >
   <div className="container">
     <div
