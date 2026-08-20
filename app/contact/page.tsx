@@ -31,9 +31,9 @@ export default function ContactPage() {
 }
 
   const offices = [
-    { city: 'Sydney', address: 'Level 12/87-89 Liverpool Street, Sydney NSW 2000', image: '/images/offices/sydney.webp' },
-    { city: 'Brisbane', address: 'Level 1/7 Clunies Ross Court, Eight Mile Plains QLD 4113', image: '/images/offices/brisbane.webp' },
-    { city: 'Hobart', address: 'Level 1/22 Liverpool Street, Hobart TAS 7000', image: '/images/offices/hobart.jpg' }
+    { city: 'Sydney', address: 'Level 12/87-89 Liverpool Street, Sydney NSW 2000', img: '/images/offices/sydney.webp' },
+    { city: 'Brisbane', address: 'Level 1/7 Clunies Ross Court, Eight Mile Plains QLD 4113', img: '/images/offices/brisbane.webp' },
+    { city: 'Hobart', address: 'Level 1/22 Liverpool Street, Hobart TAS 7000', img: '/images/offices/hobart.jpg' }
   ]
 
 
@@ -194,13 +194,16 @@ export default function ContactPage() {
           <div className="grid-3">
             {offices.map(o => (
               <div key={o.city} className="card" style={{ textAlign: 'center' }}>
-                <div style={{
-                  width: '100%', aspectRatio: '16/9',
-                  background: 'linear-gradient(135deg, var(--sky) 0%, #D6E4FF 100%)',
-                  borderRadius: '0.75rem', marginBottom: '1.5rem',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  color: 'var(--blue)', fontSize: '0.8rem', opacity: 0.6
-                }}>Map Placeholder</div>
+                <img
+                  src={o.img}
+                  alt={`${o.city} office`}
+                  style={{
+                    width: '100%', aspectRatio: '16/9',
+                    objectFit: 'cover',
+                    borderRadius: '0.75rem', marginBottom: '1.5rem',
+                    display: 'block',
+                  }}
+                />
                 <h3 className="heading-3" style={{ color: 'var(--navy)', marginBottom: '1rem' }}>{o.city}</h3>
                 <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start', justifyContent: 'center', marginBottom: '0.75rem' }}>
                   <MapPin size={15} color="var(--blue)" style={{ flexShrink: 0, marginTop: 2 }} />
