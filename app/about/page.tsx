@@ -38,7 +38,7 @@ const team = [
 
 const offices = [
   { city: 'Sydney', address: 'Level 12/87-89 Liverpool Street, Sydney NSW 2000' },
-  { city: 'Brisbane', address: 'Level 1/ 7 Clunies Ross Court, Eight Mile Plains QLD 4113' },
+  { city: 'Brisbane', address: 'Level 1/7 Clunies Ross Court, Eight Mile Plains QLD 4113' },
   { city: 'Hobart', address: 'Level 1/22 Liverpool Street, Hobart TAS 7000' },
 ]
 

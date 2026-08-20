@@ -32,7 +32,7 @@ export default function ContactPage() {
 
   const offices = [
     { city: 'Sydney', address: 'Level 12/87-89 Liverpool Street, Sydney NSW 2000' },
-    { city: 'Brisbane', address: 'Level 1, 7 Clunies Ross Court, Eight Mile Plains QLD 4113' },
+    { city: 'Brisbane', address: 'Level 1/7 Clunies Ross Court, Eight Mile Plains QLD 4113' },
     { city: 'Hobart', address: 'Level 1/22 Liverpool Street, Hobart TAS 7000' }
 
   ]
@@ -205,10 +205,6 @@ export default function ContactPage() {
                 <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start', justifyContent: 'center', marginBottom: '0.75rem' }}>
                   <MapPin size={15} color="var(--blue)" style={{ flexShrink: 0, marginTop: 2 }} />
                   <span style={{ fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.6, textAlign: 'left' }}>{o.address}</span>
-                </div>
-                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', justifyContent: 'center' }}>
-                  <Phone size={15} color="var(--blue)" />
-                  <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>{o.phone}</span>
                 </div>
               </div>
             ))}
