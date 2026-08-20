@@ -322,7 +322,7 @@ export default function HomePage() {
 <section className="section" id="process" style={{ background: 'var(--white)' }}>
   <div className="container">
     <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-      <div className="label">How It Works</div>
+      <div className="label">How it Works</div>
       <div className="divider" style={{ margin: '1rem auto 1.5rem' }} />
       <h2 className="heading-1">A transparent client journey</h2>
       <p className="body-lg" style={{ maxWidth: 520, margin: '1rem auto 0' }}>
